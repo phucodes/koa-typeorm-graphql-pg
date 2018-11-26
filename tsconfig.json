@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2018",
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "experimentalDecorators": true,
+        "baseUrl": "./src",
+        "typeRoots": [
+            "../../typings",
+            "../../node_modules/@types"
+        ]
+    },
+    "compileOnSave": false,
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
