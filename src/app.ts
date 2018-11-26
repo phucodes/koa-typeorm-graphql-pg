@@ -6,6 +6,7 @@ import { router } from 'koa-router';
 
 const port = 3000;
 
+// PERFORM FIRST TIME SEEDING. TODO: PREVENT TWICE RUNNING EVERYTIME APP STARTUPS
 const bootstrap = async() => {
     const seed = dbInitializers();;
     
@@ -19,4 +20,10 @@ const bootstrap = async() => {
 
 //todo: close connection when app closes
 
-bootstrap();
+//bootstrap(); 
+// THE ABOVE FUNCTION IS ONLY FOR FIRST TIME SEEDING OF SAMPLE DATA IN THE CASE THIS REPO IS CLONED INTO A DIFFERENT MACHINE.
+
+const app = new Koa();
+app.listen(port, () => {
+    console.log(`server is listening on ` + port);
+});
